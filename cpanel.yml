@@ -1,0 +1,8 @@
+deployment:
+  tasks:
+    - name: Deploy HTML files
+      command: |
+        rsync -av . /home/scentrag/public_html/ \
+        --exclude README.md \
+        --exclude .git \
+        --exclude cpanel.yml
